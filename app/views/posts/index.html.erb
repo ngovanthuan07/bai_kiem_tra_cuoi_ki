@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 class="text-center">Posts</h1>
+
+<table id="posts" class="table">
+  <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Body</th>
+        <th scope="col">View</th>
+        <th scope="col">Option</th>
+      </tr>
+  </thead>
+  <tbody>
+      <% @posts.each do |post| %>
+        <%= render post %>
+
+      <% end %>
+  </tbody>
+</table >
+<%= link_to "New post", new_post_path, class:'btn btn-primary' %>
+<br>
